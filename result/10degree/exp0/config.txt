@@ -1,0 +1,213 @@
+data setting:
+    window_size=150, stride=1
+trainning setting:
+   batch_size=128, learning_rate=0.0005, weight_decay=0.0001
+model setting:
+USFFNet(
+  (SFFBlock): Sequential(
+    (SFFBlock0): SFFBlock(
+      (FB): FusionBlock(
+        (SA): SpatialAttention(
+          (CNN): Conv1d(2, 1, kernel_size=(3,), stride=(1,), padding=(1,))
+        )
+        (CA): ChannelAttention(
+          (MLP): Sequential(
+            (0): Linear(in_features=3, out_features=6, bias=True)
+            (1): Linear(in_features=6, out_features=3, bias=True)
+          )
+          (Sigmoid): Sigmoid()
+        )
+      )
+      (SF): SpatialFlow(
+        (Spa_CNN): Sequential(
+          (0): Conv1d(3, 16, kernel_size=(3,), stride=(1,), padding=(1,))
+          (1): ReLU()
+          (2): Conv1d(16, 3, kernel_size=(3,), stride=(1,), padding=(1,))
+        )
+      )
+      (FF): FrequencyFlow(
+        (pha_process): Sequential(
+          (0): Conv1d(3, 16, kernel_size=(3,), stride=(1,), padding=(1,))
+          (1): ReLU()
+          (2): Conv1d(16, 3, kernel_size=(3,), stride=(1,), padding=(1,))
+        )
+        (amp_process): Sequential(
+          (0): Conv1d(3, 16, kernel_size=(3,), stride=(1,), padding=(1,))
+          (1): ReLU()
+          (2): Conv1d(16, 3, kernel_size=(3,), stride=(1,), padding=(1,))
+        )
+      )
+    )
+    (SFFBlock1): SFFBlock(
+      (FB): FusionBlock(
+        (SA): SpatialAttention(
+          (CNN): Conv1d(2, 1, kernel_size=(3,), stride=(1,), padding=(1,))
+        )
+        (CA): ChannelAttention(
+          (MLP): Sequential(
+            (0): Linear(in_features=3, out_features=6, bias=True)
+            (1): Linear(in_features=6, out_features=3, bias=True)
+          )
+          (Sigmoid): Sigmoid()
+        )
+      )
+      (SF): SpatialFlow(
+        (Spa_CNN): Sequential(
+          (0): Conv1d(3, 16, kernel_size=(5,), stride=(1,), padding=(2,))
+          (1): ReLU()
+          (2): Conv1d(16, 3, kernel_size=(5,), stride=(1,), padding=(2,))
+        )
+      )
+      (FF): FrequencyFlow(
+        (pha_process): Sequential(
+          (0): Conv1d(3, 16, kernel_size=(5,), stride=(1,), padding=(2,))
+          (1): ReLU()
+          (2): Conv1d(16, 3, kernel_size=(5,), stride=(1,), padding=(2,))
+        )
+        (amp_process): Sequential(
+          (0): Conv1d(3, 16, kernel_size=(5,), stride=(1,), padding=(2,))
+          (1): ReLU()
+          (2): Conv1d(16, 3, kernel_size=(5,), stride=(1,), padding=(2,))
+        )
+      )
+    )
+    (SFFBlock2): SFFBlock(
+      (FB): FusionBlock(
+        (SA): SpatialAttention(
+          (CNN): Conv1d(2, 1, kernel_size=(7,), stride=(1,), padding=(3,))
+        )
+        (CA): ChannelAttention(
+          (MLP): Sequential(
+            (0): Linear(in_features=3, out_features=6, bias=True)
+            (1): Linear(in_features=6, out_features=3, bias=True)
+          )
+          (Sigmoid): Sigmoid()
+        )
+      )
+      (SF): SpatialFlow(
+        (Spa_CNN): Sequential(
+          (0): Conv1d(3, 8, kernel_size=(7,), stride=(1,), padding=(3,))
+          (1): ReLU()
+          (2): Conv1d(8, 3, kernel_size=(7,), stride=(1,), padding=(3,))
+        )
+      )
+      (FF): FrequencyFlow(
+        (pha_process): Sequential(
+          (0): Conv1d(3, 8, kernel_size=(7,), stride=(1,), padding=(3,))
+          (1): ReLU()
+          (2): Conv1d(8, 3, kernel_size=(7,), stride=(1,), padding=(3,))
+        )
+        (amp_process): Sequential(
+          (0): Conv1d(3, 8, kernel_size=(7,), stride=(1,), padding=(3,))
+          (1): ReLU()
+          (2): Conv1d(8, 3, kernel_size=(7,), stride=(1,), padding=(3,))
+        )
+      )
+    )
+    (SFFBlock3): SFFBlock(
+      (FB): FusionBlock(
+        (SA): SpatialAttention(
+          (CNN): Conv1d(2, 1, kernel_size=(7,), stride=(1,), padding=(3,))
+        )
+        (CA): ChannelAttention(
+          (MLP): Sequential(
+            (0): Linear(in_features=3, out_features=6, bias=True)
+            (1): Linear(in_features=6, out_features=3, bias=True)
+          )
+          (Sigmoid): Sigmoid()
+        )
+      )
+      (SF): SpatialFlow(
+        (Spa_CNN): Sequential(
+          (0): Conv1d(3, 8, kernel_size=(7,), stride=(1,), padding=(3,))
+          (1): ReLU()
+          (2): Conv1d(8, 3, kernel_size=(7,), stride=(1,), padding=(3,))
+        )
+      )
+      (FF): FrequencyFlow(
+        (pha_process): Sequential(
+          (0): Conv1d(3, 8, kernel_size=(7,), stride=(1,), padding=(3,))
+          (1): ReLU()
+          (2): Conv1d(8, 3, kernel_size=(7,), stride=(1,), padding=(3,))
+        )
+        (amp_process): Sequential(
+          (0): Conv1d(3, 8, kernel_size=(7,), stride=(1,), padding=(3,))
+          (1): ReLU()
+          (2): Conv1d(8, 3, kernel_size=(7,), stride=(1,), padding=(3,))
+        )
+      )
+    )
+    (SFFBlock4): SFFBlock(
+      (FB): FusionBlock(
+        (SA): SpatialAttention(
+          (CNN): Conv1d(2, 1, kernel_size=(7,), stride=(1,), padding=(3,))
+        )
+        (CA): ChannelAttention(
+          (MLP): Sequential(
+            (0): Linear(in_features=3, out_features=6, bias=True)
+            (1): Linear(in_features=6, out_features=3, bias=True)
+          )
+          (Sigmoid): Sigmoid()
+        )
+      )
+      (SF): SpatialFlow(
+        (Spa_CNN): Sequential(
+          (0): Conv1d(3, 4, kernel_size=(7,), stride=(1,), padding=(3,))
+          (1): ReLU()
+          (2): Conv1d(4, 3, kernel_size=(7,), stride=(1,), padding=(3,))
+        )
+      )
+      (FF): FrequencyFlow(
+        (pha_process): Sequential(
+          (0): Conv1d(3, 4, kernel_size=(7,), stride=(1,), padding=(3,))
+          (1): ReLU()
+          (2): Conv1d(4, 3, kernel_size=(7,), stride=(1,), padding=(3,))
+        )
+        (amp_process): Sequential(
+          (0): Conv1d(3, 4, kernel_size=(7,), stride=(1,), padding=(3,))
+          (1): ReLU()
+          (2): Conv1d(4, 3, kernel_size=(7,), stride=(1,), padding=(3,))
+        )
+      )
+    )
+    (SFFBlock5): SFFBlock(
+      (FB): FusionBlock(
+        (SA): SpatialAttention(
+          (CNN): Conv1d(2, 1, kernel_size=(7,), stride=(1,), padding=(3,))
+        )
+        (CA): ChannelAttention(
+          (MLP): Sequential(
+            (0): Linear(in_features=3, out_features=6, bias=True)
+            (1): Linear(in_features=6, out_features=3, bias=True)
+          )
+          (Sigmoid): Sigmoid()
+        )
+      )
+      (SF): SpatialFlow(
+        (Spa_CNN): Sequential(
+          (0): Conv1d(3, 4, kernel_size=(7,), stride=(1,), padding=(3,))
+          (1): ReLU()
+          (2): Conv1d(4, 3, kernel_size=(7,), stride=(1,), padding=(3,))
+        )
+      )
+      (FF): FrequencyFlow(
+        (pha_process): Sequential(
+          (0): Conv1d(3, 4, kernel_size=(7,), stride=(1,), padding=(3,))
+          (1): ReLU()
+          (2): Conv1d(4, 3, kernel_size=(7,), stride=(1,), padding=(3,))
+        )
+        (amp_process): Sequential(
+          (0): Conv1d(3, 4, kernel_size=(7,), stride=(1,), padding=(3,))
+          (1): ReLU()
+          (2): Conv1d(4, 3, kernel_size=(7,), stride=(1,), padding=(3,))
+        )
+      )
+    )
+  )
+  (CNNI): Sequential(
+    (0): Conv1d(3, 1, kernel_size=(3,), stride=(1,), padding=(1,))
+  )
+  (Uncertainty_Head): UncertaintyHead(
+    (MLP): Linear(in_features=150, out_features=4, bias=True)
+  )
+)
