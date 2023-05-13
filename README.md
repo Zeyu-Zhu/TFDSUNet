@@ -24,5 +24,8 @@ conda activate TFDSUNet
 ## Other Codes
 Data preprocessing, dataloader and metrics(MSE and RMSR) are implemented in `utils`.
 
-## Result on LG datasets
+## Result on LG Datasets
 Pre-trained models on 0 degree and 10 degree datasets are saved in `result/0degree` and `result/10degree`, respectively.
+
+## Datasets
+Datasets can be found in [`CALCE`](https://calce.umd.edu/battery-data#Citations) and [`LG`](https://data.mendeley.com/datasets/cp3473x7xv/3)
