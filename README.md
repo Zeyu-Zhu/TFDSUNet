@@ -6,7 +6,7 @@
 <p align="center">
   <img src="figure/insight.png" />
 </p>
-The sequence of current, voltage and temperature presents a strong periodicity during battery discharge. Existing data-driven methods often only explore feature extraction in the time domain. However, the invariance and variability in the frequency domain are better data structures for data extraction.And the local feature extraction in the frequency domain corresponds to the global extraction in the time domain. Our method can also be regarded as a global information supplement to the local feature extraction in the time domain.
+The sequence of current, voltage and temperature presents a strong periodicity during battery discharge. Existing data-driven methods often only explore feature extraction in the time domain. However, the invariance and variability in the frequency domain are better data structures for feature extraction in deeping learning.And the local feature extraction in the frequency domain corresponds to the global extraction in the time domain. Our method can also be regarded as a global information supplement to the local feature extraction in the time domain.
 
 
 ## Set up a virtual conda environment
