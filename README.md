@@ -33,7 +33,7 @@ And if you want to test it, please run following order in your terminal.
 ```
 python test_uncertainty.py
 ```
-It's worthing noticing that you may need to modify `path` in `train_uncertainty.py` because you may change name of files.
+It's worthing noticing that you may need to modify `path` in `train_uncertainty.py` and `test_uncertainty.py`because you may change name of files.
 ## Other Codes
 Data preprocessing, dataloader and metrics(MSE and RMSR) are implemented in `utils`.
 
