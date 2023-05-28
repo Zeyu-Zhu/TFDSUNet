@@ -1,6 +1,8 @@
 # TFDSUNet: Time-Frequency Dual-Stream Uncertainty Network for Battery SOH/SOC Prediction
 [`Wenzhe Xiao`](https://gr.xjtu.edu.cn/en/web/caoxiangyong/home), and [`Zeyu Zhu`](https://scholar.google.com/citations?hl=zh-CN&view_op=list_works&gmla=ABEO0Ypgw7n86h8mMjkhHVfmhMuPPgnO7C4NT-RWQ_lB1xSqtIWcyPqrPOsxI7ffxZ-amtiKK7KVFRnx_ZOPxFYH2-iKKLY&user=X3CisOwAAAAJ)
 
+Details can be found in our paper [`ResearchSquare`](https://www.researchsquare.com/article/rs-2943579/v1), which is Under Review at Nature Portfolio.
+
 
 ## Our Insight
 <p align="center">
@@ -39,3 +41,13 @@ Data preprocessing, dataloader and metrics(MSE and RMSR) are implemented in `uti
 
 ## Result on LG Datasets
 Pre-trained models on 0 degree and 10 degree datasets are saved in `result/0degree` and `result/10degree`, respectively.
+
+## Citations
+If you find our work useful, please cite our paper.
+```
+@article{xiao2023tfdsunet,
+  title={TFDSUNet: Time-Frequency Dual-Stream Uncertainty Network for Battery SOH/SOC Prediction},
+  author={Xiao, Wenzhe and Zhu, Zeyu and Wang, Qizhou and Pang, Li and Shu, Chengyong and Meng, Deyu and Cao, Xiangyong},
+  year={2023}
+}
+```
