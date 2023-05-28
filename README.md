@@ -1,7 +1,7 @@
 # TFDSUNet: Time-Frequency Dual-Stream Uncertainty Network for Battery SOH/SOC Prediction
 [`Wenzhe Xiao`](https://gr.xjtu.edu.cn/en/web/caoxiangyong/home), and [`Zeyu Zhu`](https://scholar.google.com/citations?hl=zh-CN&view_op=list_works&gmla=ABEO0Ypgw7n86h8mMjkhHVfmhMuPPgnO7C4NT-RWQ_lB1xSqtIWcyPqrPOsxI7ffxZ-amtiKK7KVFRnx_ZOPxFYH2-iKKLY&user=X3CisOwAAAAJ)
 
-Details can be found in our paper [`ResearchSquare`](https://www.researchsquare.com/article/rs-2943579/v1), which is Under Review at Nature Portfolio.
+Details can be found in our paper [`ResearchSquare`](https://www.researchsquare.com/article/rs-2943579/v1), which is under review at Nature Portfolio.
 
 
 ## Our Insight
