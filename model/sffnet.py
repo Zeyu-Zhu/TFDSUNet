@@ -3,8 +3,8 @@ import math
 import torch.nn.init as init
 import torch.nn as nn
 import torch.fft as fft
-from .uncertainty_head import UncertaintyHead
-from .basic_module import *
+from uncertainty_head import UncertaintyHead
+from basic_module import *
 
 
 class SpatialFlow(nn.Module):
@@ -99,7 +99,7 @@ class USFFNet(nn.Module):
         super(USFFNet, self).__init__()
         self.SFFBlock = nn.Sequential()
         for i in range(num_block):
-             self.SFFBlock.add_module('SFFBlock'+str(i), SFFBlock(window_size, feature_num, mid_channel_list[i], spa_ks_list[i], fre_ks_list[i], fus_ks_list[i], 2, False, True, False))
+             self.SFFBlock.add_module('SFFBlock'+str(i), SFFBlock(window_size, feature_num, mid_channel_list[i], spa_ks_list[i], fre_ks_list[i], fus_ks_list[i], 2, True, True, True))
         self.CNNI = nn.Sequential(nn.Conv1d(feature_num, 1, 3, 1, 1))
         self.Uncertainty_Head = UncertaintyHead(window_size)
     
@@ -117,7 +117,7 @@ class SFFNet(nn.Module):
         super(SFFNet, self).__init__()
         self.SFFBlock = nn.Sequential()
         for i in range(num_block):
-             self.SFFBlock.add_module('SFFBlock'+str(i), SFFBlock(window_size, feature_num, mid_channel_list[i], spa_ks_list[i], fre_ks_list[i], fus_ks_list[i], 2))
+             self.SFFBlock.add_module('SFFBlock'+str(i), SFFBlock(window_size, feature_num, mid_channel_list[i], spa_ks_list[i], fre_ks_list[i], fus_ks_list[i], 2, True, True, True))
         self.CNNI = nn.Sequential(nn.Conv1d(feature_num, 1, 3, 1, 1))
         self.MLP = nn.Linear(window_size, 1)
     
